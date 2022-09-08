@@ -8,7 +8,6 @@ from RPA.Email.ImapSmtp import ImapSmtp
 from RPA.Archive import Archive
 
 
-
 class RpaRobocorp1:
 
     def __init__(self):
@@ -20,7 +19,6 @@ class RpaRobocorp1:
         self.pdf = PDF()
         self.email = ImapSmtp()
         self.zip = Archive()
-
 
     def open_browser(self):
         self.browse.open_available_browser(self.url, maximized=True, )
@@ -80,7 +78,8 @@ class RpaRobocorp1:
         self.browse.auto_close = True
 
     def make_zip(self):
-        self.zip.archive_folder_with_zip("/home/usman/Python-RPA/1_Robocorp_MariaSales_Project/output", "final.zip", True, )
+        self.zip.archive_folder_with_zip("/home/usman/Python-RPA/1_Robocorp_MariaSales_Project/output", "final.zip",
+                                         True, )
 
     def send_email(self):
         try:
